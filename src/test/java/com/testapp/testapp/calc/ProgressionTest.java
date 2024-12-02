@@ -3,6 +3,7 @@ package com.testapp.testapp.calc;
 import org.junit.jupiter.api.BeforeAll;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class ProgressionTest {
     private static Progression progression = null;
@@ -15,12 +16,8 @@ class ProgressionTest {
     }
 
     @org.junit.jupiter.api.Test
-    void testNotNullCalcSumm() {
+    void testCalcSumm() {
         assertEquals(26, progression.CalcSumm());
+        assertNotEquals(0, empty_progression.CalcSumm());
     }
-    @org.junit.jupiter.api.Test
-    void testNullCalcSumm() {
-        assertEquals(0, empty_progression.CalcSumm());
-    }
-
 }
